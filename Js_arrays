@@ -1,0 +1,93 @@
+var students = [{
+        name: "Detusa",
+        age: 18,
+        grades: [93, 81, 78, 78, 89]
+    }, {
+        name: "Abimbola",
+        age: 18,
+        grades: [97, 94, 81, 97, 95]
+    }, {
+        name: "Ajagbe",
+        age: 17,
+        grades: [50, 80, 90, 85, 68]
+    }, {
+        name: "Adewale",
+        age: 15,
+        grades: [97, 94, 80, 97, 95]
+    }, {
+        name: "Joshua",
+        age: 16,
+        grades: [97, 90, 81, 90, 95]
+    }];
+
+
+    // Function to calculate the average grade
+
+    function calculate(grade) {
+        var sum = 0;
+        for (var i = 0; i < grade.length; i++) {
+            sum = sum + grade[i];
+        }
+        return sum / grade.length;
+    }
+
+
+    for (var i = 0; i < students.length; i++) {;
+        var average = calculate(students[i].grades);
+        console.log(students[i].name + " Average: " + average.toFixed(3));
+
+        if (average >= 90) {
+            console.log(students[i].name + " is eligible for a scholarship");
+        } else {
+            console.log(students[i].name + " not  eligible for a scholarship");
+        }
+    }
+/*
+Given the array below, find the average of each student.
+ var students = [{
+        name: John,
+        grades: {
+            Maths: 56,
+            Eng: 78,
+            Science: 89,
+            Civic: 67
+
+
+        }
+
+    }, {
+        name: John,
+        grades: {
+            Maths: 80,
+            Eng: 87,
+            Science: 80,
+            Civic: 67
+
+
+        }
+
+    }, {
+        name: John,
+        grades: {
+            Maths: 56,
+            Eng: 70,
+            Science: 79,
+            Civic: 77
+
+
+        }
+
+    }, {
+        name: John,
+        grades: {
+            Maths: 78,
+            Eng: 65,
+            Science: 80,
+            Civic: 67
+
+
+        }
+
+    }]
+
+*/
